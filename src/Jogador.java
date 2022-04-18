@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Jogador {
 
     String nome;
@@ -6,6 +8,19 @@ public class Jogador {
 
         this.nome = nome;
         
+    }
+    
+    public static int[] fazerJogada(Scanner scan, char sa){
+
+        int p[] = new int [2];
+   
+        System.out.printf("%s %c %n","Quem joga: ", sa);
+        System.out.print("Informe a linha: ");
+        p[0] = scan.nextInt();
+        System.out.print("Informe a Coluna: ");
+        p[1] = scan.nextInt();
+        return p;
+   
     }
     
 }

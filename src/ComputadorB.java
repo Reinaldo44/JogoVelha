@@ -2,15 +2,14 @@ import java.util.Random;
 
 public class ComputadorB {
 
-    public String nome = "Medio";
+    public String nome = "Computador B";
     
     public static int[] fazerJogada(char simbolo, Tabuleiro tabuleiro[][]){
 
-        int p[] = new int [2];
+       int p[] = new int [2];
+       Random random = new Random();
   
-        System.out.printf("%s %c %n","Quem joga: ", simbolo);
-
-        Random random = new Random();
+       System.out.printf("%s %c %n","Quem joga: ", simbolo);
 
          for(int i=0; i<20;i++){
 
@@ -19,11 +18,12 @@ public class ComputadorB {
             
          if(tabuleiro[p[0]][p[1]].getSimbolo() == ' '){
 
-           break;
+          break;
            
          }
         
         }
+
         return p;
     }   
 }

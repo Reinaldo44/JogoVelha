@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Tabuleiro {
 
     private char simbolo;
@@ -45,7 +43,6 @@ public class Tabuleiro {
         tabuleiro[p[0]][p[1]].setSimbolo(simboloAtual);
 
         return true;
-
       }
       else{
 
@@ -66,29 +63,14 @@ public class Tabuleiro {
       }
   }
 
- public static int[] fazerJogada(Scanner scan, char sa){
-
-     int p[] = new int [2];
-
-     System.out.printf("%s %c %n","Quem joga: ", sa);
-     System.out.print("Informe a linha: ");
-     p[0] = scan.nextInt();
-     System.out.print("Informe a Coluna: ");
-     p[1] = scan.nextInt();
-
-     return p;
-
- }
-
  public static boolean retornaVitoria(Tabuleiro[][] tabuleiro){
 
-      if (tabuleiro[0][0].getSimbolo() == 'X' &&  
+     if (tabuleiro[0][0].getSimbolo() == 'X' &&  
           tabuleiro[0][1].getSimbolo() == 'X' &&
           tabuleiro[0][2].getSimbolo() == 'X' 
          ) {
-          return true;    
-           
-      }
+          return true;              
+    }
      else if( tabuleiro[0][1].getSimbolo() == 'O' &&
               tabuleiro[0][0].getSimbolo() == 'O' &&
               tabuleiro[0][2].getSimbolo() == 'O' ){
@@ -98,9 +80,9 @@ public class Tabuleiro {
      else if(tabuleiro[1][0].getSimbolo() == 'X' &&
              tabuleiro[1][1].getSimbolo() == 'X' &&
              tabuleiro[1][2].getSimbolo() == 'X') {
-             return true; 
-        
-      }
+             return true;      
+     }
+
      else if(tabuleiro[1][0].getSimbolo() == 'O' &&
              tabuleiro[1][1].getSimbolo() == 'O' &&
              tabuleiro[1][2].getSimbolo() == 'O' ){
@@ -124,64 +106,75 @@ public class Tabuleiro {
              tabuleiro[2][0].getSimbolo() == 'X' ) {
 
           return true; 
-      }
-
-      else if(tabuleiro[0][0].getSimbolo() == 'O' &&
-      tabuleiro[1][0].getSimbolo() == 'O' &&
-      tabuleiro[2][0].getSimbolo() == 'O'){
-         return true;
-      }
-     else if(tabuleiro[0][1].getSimbolo() == 'X' &&
-          tabuleiro[1][1].getSimbolo() == 'X' &&
-          tabuleiro[2][1].getSimbolo() == 'X' 
- ) {
-
-          return true; 
      }
 
-     else if(tabuleiro[0][1].getSimbolo() == 'O' &&
-     tabuleiro[1][1].getSimbolo() == 'O' &&
-     tabuleiro[2][1].getSimbolo() == 'O'){
+    else if(tabuleiro[0][0].getSimbolo() == 'O' &&
+              tabuleiro[1][0].getSimbolo() == 'O' &&
+              tabuleiro[2][0].getSimbolo() == 'O'){
+
+         return true;
+     }
+
+    else if( tabuleiro[0][1].getSimbolo() == 'X' &&
+             tabuleiro[1][1].getSimbolo() == 'X' &&
+             tabuleiro[2][1].getSimbolo() == 'X') {
+
+             return true; 
+     }  
+
+    else if( tabuleiro[0][1].getSimbolo() == 'O' &&
+             tabuleiro[1][1].getSimbolo() == 'O' &&
+             tabuleiro[2][1].getSimbolo() == 'O'){
+
           return true;
      }
-     else if(tabuleiro[0][2].getSimbolo() == 'X' &&
+
+    else if(tabuleiro[0][2].getSimbolo() == 'X' &&
           tabuleiro[1][2].getSimbolo() == 'X' &&
           tabuleiro[2][2].getSimbolo() == 'X' ) {
 
           return true; 
-     }
-
-     else if(tabuleiro[0][2].getSimbolo() == 'O' &&
-     tabuleiro[1][2].getSimbolo() == 'O' &&
-     tabuleiro[2][2].getSimbolo() == 'O' ){
-        return true;
-     }
-
-     else if(tabuleiro[0][0].getSimbolo() == 'X' &&
-          tabuleiro[1][1].getSimbolo() == 'X' &&
-          tabuleiro[2][2].getSimbolo() == 'X' ) {
-
-          return true; 
-     }
-     else if(tabuleiro[0][0].getSimbolo() == 'O' &&
-     tabuleiro[1][1].getSimbolo() == 'O' &&
-     tabuleiro[2][2].getSimbolo() == 'O' ){
-         return true;
-     }
-
-     else if(tabuleiro[2][0].getSimbolo() == 'X' &&
-          tabuleiro[1][1].getSimbolo() == 'X' &&
-          tabuleiro[0][2].getSimbolo() == 'X') {
-
-          return true; 
     }
-     else if(tabuleiro[2][0].getSimbolo() == 'O' &&
-     tabuleiro[1][1].getSimbolo() == 'O' &&
-     tabuleiro[0][2].getSimbolo() == 'O' ){
-          return true;
-     }
 
-    return false;
+    else if( tabuleiro[0][2].getSimbolo() == 'O' &&
+             tabuleiro[1][2].getSimbolo() == 'O' &&
+             tabuleiro[2][2].getSimbolo() == 'O' ){
+
+        return true;
+
+    }
+
+    else if( tabuleiro[0][0].getSimbolo() == 'X' &&
+             tabuleiro[1][1].getSimbolo() == 'X' &&
+             tabuleiro[2][2].getSimbolo() == 'X' ) {
+
+          return true; 
+
+    }
+
+    else if( tabuleiro[0][0].getSimbolo() == 'O' &&
+             tabuleiro[1][1].getSimbolo() == 'O' &&
+             tabuleiro[2][2].getSimbolo() == 'O' ){
+
+         return true;
+    }
+
+    else if( tabuleiro[2][0].getSimbolo() == 'X' &&
+             tabuleiro[1][1].getSimbolo() == 'X' &&
+             tabuleiro[0][2].getSimbolo() == 'X'){
+
+         return true; 
+    }
+
+    else if( tabuleiro[2][0].getSimbolo() == 'O' &&
+             tabuleiro[1][1].getSimbolo() == 'O' &&
+             tabuleiro[0][2].getSimbolo() == 'O' ){
+
+         return true;
+    } 
+
+     return false;
+
   }
     
 }
