@@ -1,6 +1,6 @@
 ## Introdução
 
-Bem vindo ao jogo, é o tradiciona Jogo da velha desenvolvido na linguagem Java, no Visual Code, aplicando orientação a objetos.
+Bem vindo ao jogo, é o tradicional Jogo da velha desenvolvido na linguagem Java, no Visual Studio Code, aplicando orientação a objetos.
 
 ## Detalhes do Jogo
 
@@ -8,8 +8,11 @@ Bem vindo ao jogo, é o tradiciona Jogo da velha desenvolvido na linguagem Java,
 com o símbolo X.
 
   Ganha aquele que marcar todas as colunas em qualquer direção.
-## Detalhes do Código
+  
+## Melhorias em versões futuras
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Jogador poder escolher qual símbolo quer jogar
+- Aplicar inteligência no nível normal e difícil
+- Desenvolver jogo na verão Web otimizado para mobile.
+
