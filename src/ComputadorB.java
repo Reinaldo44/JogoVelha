@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class ComputadorB {
 
+    //Método que faz a jogada do Computador B, ele faz um random aleatório em todas as jogadas.
     public String nome = "Computador B";
     
     public static int[] fazerJogada(char simbolo, Tabuleiro tabuleiro[][]){

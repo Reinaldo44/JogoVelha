@@ -10,6 +10,7 @@ public class Jogador {
         
     }
     
+    //Método que faz a jogada do jogador que recebe a opção desejada via teclado.
     public static int[] fazerJogada(Scanner scan, char sa){
 
         int p[] = new int [2];

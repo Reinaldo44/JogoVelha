@@ -3,7 +3,8 @@ import java.util.Random;
 public class ComputadorA {
 
    public String nome = "Computador A";
-    
+
+   //Método que faz a jogada do computador A, que começa jogando na linha 1, e depois de toda prenchida ela joga em um Random aleatório.
    public static int[] fazerJogada(char simbolo, Tabuleiro tabuleiro[][]){
 
      int p[] = new int [2];
@@ -49,7 +50,7 @@ public class ComputadorA {
         } 
 
         }
-        
+
          return p;
     }    
 }

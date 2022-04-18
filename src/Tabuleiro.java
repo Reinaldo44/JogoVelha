@@ -1,3 +1,4 @@
+//classe Tabuleiro onde está toda a regra referente ao tabuleiro, onde começa com suas propiedade, contrutor e seus métodos
 public class Tabuleiro {
 
     private char simbolo;
@@ -23,9 +24,9 @@ public class Tabuleiro {
        }
 
    }
-
+   
+   //Método responsavel por mostrar o tabuleiro que esta sendo jogado.
    public static void telaJogo(Tabuleiro[][] tabuleiro){
-
             
      System.out.println("    0 | 1 | 2 |");
      System.out.println("--------------");
@@ -37,6 +38,7 @@ public class Tabuleiro {
      System.out.println("--------------");
  }
 
+ //Método que verifica se a jogada é possivel de ser realizada
  public static boolean verificaJogada(Tabuleiro[][] tabuleiro, int p[],char simboloAtual){
       if(tabuleiro[p[0]][p[1]].getSimbolo() == ' '){
 
@@ -51,7 +53,8 @@ public class Tabuleiro {
      
   }
 
-  public static void iniciarJogo(Tabuleiro[][] tabuleiro){
+//Método que popula cada posição da matriz para e criar o tabuleiro.
+public static void iniciarJogo(Tabuleiro[][] tabuleiro){
 
       for(int l=0; l<3; l++){
 
@@ -63,6 +66,7 @@ public class Tabuleiro {
       }
   }
 
+//Método que verifica a vitória por parte do jogador ou por parte computador.
  public static boolean retornaVitoria(Tabuleiro[][] tabuleiro){
 
      if (tabuleiro[0][0].getSimbolo() == 'X' &&  
